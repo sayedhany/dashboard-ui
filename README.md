@@ -21,7 +21,7 @@ This project implements a simple dashboard UI based on the [Figma design](https:
   ```
 2. Navigate to the Angular project directory:
   ```bash
-  cd path-to-angular-project
+  cd dashboard-task
   ```
 3. Install the project dependencies:
   ```bash
