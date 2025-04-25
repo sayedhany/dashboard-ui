@@ -4,12 +4,12 @@
 .header{
   // width: calc(100% - 28rem);
   flex: 1;
-  border: 1px solid red;
+  // border: 1px solid red;
   height: 7rem;
 }
 .side-bar{
   width: 28rem;
-  border: 1px solid red;
+  // border: 1px solid red;
   height: 100dvh;
   @media (max-width: 991px) {
     width: 12rem;

@@ -1,3 +1,58 @@
 :host {
   display: block;
+  height: 100%;
+}
+.search-input{
+  position: relative;
+  width: 50%;
+  @media (max-width: 567px) {
+    width: 20%;
+
+  }
+  i{
+    position: absolute;
+    top: 33%;
+    left: 5%;  
+    color: #BCC4C8;
+  }
+  input{
+    width: 100%;
+    border: none;
+    background-color: #F8FAFB;
+    border-radius: .6rem;
+    height: 4rem;
+    padding-left: 6rem;
+    @media (max-width: 567px) {
+      padding-left: 3rem;
+    }
+    &::placeholder{
+      color: #BCC4C8;
+    }
+  }
+}
+.btn{
+  background-color: #E7EDF0;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 1rem;
+  .badge{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #FB7B7B;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  i{
+    color: #9DACB4;
+  }
 }

@@ -1,14 +1,14 @@
 <!-- sidebar.component.html -->
-<div class="sidebar p-3 d-flex flex-column h-100" >
+<div class="sidebar {{sidebarOpened()?'p-1':'p-3'}} d-flex flex-column h-100" >
   <div class="mb-4 d-flex justify-content-center  align-items-center gap-2">
     <img class="p-3" src="assets/main-logo.png" alt="Logo">
   </div>
 
-  <div class="nav flex-column mb-auto mx-4">
+  <div class="nav flex-column mb-auto {{sidebarOpened()?'mx-1':'mx-4'}}">
     @for (item of (sidebarItems()| slice:0:6); track $index) {
       <a
       [routerLink]="item.route"
-      class="nav-link d-flex justify-content-center justify-content-lg-start align-items-center gap-3 mb-2 p-3"
+      class="nav-link d-flex {{sidebarOpened()?'justify-content-start':'justify-content-center justify-content-lg-start'}} align-items-center gap-3 mb-2 p-3"
       [class.active]="isActive(item.route)"
     >
     @if (item.icon) {
@@ -18,11 +18,11 @@
       <!-- {{item.title}} -->
       <i class="custom-icon" inlineSVG="assets/icons/{{item.title}}.svg"></i>
     }
-      <span class="d-none d-lg-inline-block">{{ item.title }}</span>
+      <span class="{{sidebarOpened()?'d-inline-block':'d-none d-lg-inline-block'}}">{{ item.title }}</span>
       @if (item.hasNotification) {
 
         <span  class="ms-auto">
-          <span class="badge bg-danger rounded-circle" style="width: 8px; height: 8px;"></span>
+          <span class="custom-badge rounded-circle"></span>
         </span>
       }
     </a>
@@ -31,7 +31,7 @@
     @for (item of (sidebarItems() | slice:6); track $index) {
       <a
       [routerLink]="item.route"
-      class="nav-link d-flex justify-content-center justify-content-lg-start align-items-center gap-3 mb-2 p-3"
+      class="nav-link d-flex {{sidebarOpened()?'justify-content-start':'justify-content-center justify-content-lg-start'}} align-items-center gap-3 mb-2 p-3"
       [class.active]="isActive(item.route)"
     >
     @if (item.icon) {
@@ -39,23 +39,23 @@
       <i [class]="item.icon"></i>
     } @else {
       <!-- {{item.title}} -->
-      <i style="display: inline-block; margin-left: -4px;" inlineSVG="assets/icons/{{item.title}}.svg"></i>
+      <i class="custom-icon" inlineSVG="assets/icons/{{item.title}}.svg"></i>
     }
-      <span class="d-none d-lg-inline-block">{{ item.title }}</span>
+      <span class="{{sidebarOpened()?'d-inline-block':'d-none d-lg-inline-block'}} {{item.hasNotification ? 'fw-bold text-black':''}}">{{ item.title }}</span>
       @if (item.hasNotification) {
 
         <span  class="ms-auto">
-          <span class="badge bg-danger rounded-circle" style="width: 8px; height: 8px;"></span>
+          <span class="custom-badge d-inline-block rounded-circle"></span>
         </span>
       }
     </a>
     }
   </div>
 
-  <div class="mt-auto mx-4">
+  <div class="mt-auto {{sidebarOpened()?'mx-2':'mx-4'}}">
     <div class="d-flex bg-gray align-items-center gap-3 p-3 rounded shadow-sm">
       <img src="assets/profile.png" alt="">
-      <div class="d-none d-lg-block">
+      <div class="{{sidebarOpened()?'d-inline-block':'d-none d-lg-inline-block'}}">
         <div class="fw-bold">&#64;Jabastinv</div>
         <div class="text-muted small">Company</div>
       </div>
