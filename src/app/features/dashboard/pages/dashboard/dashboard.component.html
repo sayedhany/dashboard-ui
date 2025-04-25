@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<div class="dashboard-container m-5 ">
+  <h2>Analytics</h2>
+  <div class="row mt-4">
+    @for (dashCard of dashboardCards(); track $index) {
+      <div class="col-12 col-md-6 col-lg-3 ">
+        <app-dash-card [cardItem]="dashCard" class="mb-4"></app-dash-card>
+      </div>
+    }
+  </div>
+</div>

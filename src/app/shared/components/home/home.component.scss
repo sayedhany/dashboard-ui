@@ -22,6 +22,6 @@
 }
 main{
   height: calc(100dvh - 7rem);
-  border: 1px solid red;
+  border: 1px solid transparent;
   background-color: var(--bg-color);
 }

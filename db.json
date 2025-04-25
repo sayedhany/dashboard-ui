@@ -9,5 +9,33 @@
     { "title": "Messages", "icon": "fal fa-comment-dots", "route": "/messages", "hasNotification": true },
     { "title": "Support", "icon": "fal fa-life-ring", "route": "/support", "disabled": true },
     { "title": "Settings", "icon": "fas fa-cog", "route": "/settings", "disabled": true }
+  ],
+  "dashboardCards":[
+    {
+      "title": "Total Revenue",
+      "value": "$52.6k",
+      "percentage": "+3.4%",
+      "percentageColor": "success",
+      "imagePath": "assets/dash-1.png"
+    },
+    {
+      "title": "Today Revenue",
+      "value": "$1024",
+      "percentage": "-5.5%",
+      "percentageColor": "danger",
+      "imagePath": "assets/dash-2.png"
+    },
+    {
+      "title": "Items Sold",
+      "value": 22,
+      "imagePath": "assets/dash-3.png"
+      
+    },
+    {
+      "title": "Users Active",
+      "value": 11,
+      "imagePath": "assets/dash-4.png"
+    }
   ]
+ 
 }
