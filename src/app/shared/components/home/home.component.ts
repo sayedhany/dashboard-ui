@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { SidebarModule } from 'primeng/sidebar';
+import { SidebarItemsService } from '../../services/sidebarItems.service';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { SidebarModule } from 'primeng/sidebar';
   imports: [RouterOutlet, HeaderComponent, SidebarComponent, SidebarModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers:[SidebarItemsService]
 })
 export class HomeComponent {
   sidebarVisible =signal(false);

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DashboardCard } from '../../models/dashboard-card.model';
+import { DashboardCard } from '../models/dashboard-card.model';
 
 @Injectable({
   providedIn: 'root'

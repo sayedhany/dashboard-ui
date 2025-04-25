@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { DashboardCard } from '../../../models/dashboard-card.model';
+import { DashboardCard } from '../../models/dashboard-card.model';
 
 @Component({
   selector: 'app-dash-card',

@@ -15,13 +15,12 @@ import { SidebarItem } from '../../models/sidebarItem.model';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers:[SidebarItemsService]
 })
 export class SidebarComponent {
   sidebarOpened = input()
   public router = inject(Router);
   sidebarItemsSrv = inject(SidebarItemsService)
-  sidebarItems = toSignal<SidebarItem[]>(this.sidebarItemsSrv.getSidebarItems());
+  sidebarItems = toSignal<SidebarItem[]>(this.sidebarItemsSrv.sidebarItems$);
   isActive(route: string): boolean {
     return this.router.url === route;
   }

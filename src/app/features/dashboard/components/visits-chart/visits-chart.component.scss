@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.charts-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .chart{
+    // height: 100%;
+    flex:1;
+    canvas{
+      height: 100%;
+      
+    }
+  }
+  .list {
+    list-style: none;
+    li {
+      color: #C4CCD0;
+    }
+    li.active {
+      color: #0561FC;
+    }
+  }
+}

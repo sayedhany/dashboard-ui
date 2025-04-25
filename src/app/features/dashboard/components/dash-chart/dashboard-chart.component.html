@@ -1,0 +1,33 @@
+<div class="dashboard-chart_container bg-white px-2 py-3 p-md-4 shadow-sm rounded-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex align-items-center gap-3">
+      <h4 class="fw-bold mb-0">Report</h4>
+      <p-dropdown
+            class="w-100"
+            styleClass="rounded-5 py-1 px-3"
+            [optionLabel]="'label'"
+            [options]="[{ label: 'Sales' }]"
+          ></p-dropdown>
+    </div>
+
+    <ul class="list d-flex gap-2 gap-md-4 align-items-center p-0 p-md-2">
+      <li>Daily</li>
+        <li>Weekly</li>
+        <li class="active">Monthly</li>
+        <li>Yearly</li>
+        <!-- <li>
+          
+        </li> -->
+      </ul>
+    </div>    
+      <div class="chart-container">
+        <canvas
+          baseChart
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          type="line"
+          chartType="line"
+        >
+        </canvas>
+      </div>
+</div>

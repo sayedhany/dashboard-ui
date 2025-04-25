@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+.chart-container {
+  position: relative;
+  // height: 280px;
+  @media (max-width: 768px) {
+    // height: 146%;
+  }
+  // margin: auto;
+}
+
+canvas {
+  background-color: #fff;
+  width: 100% !important;
+  border-radius: 10px;
+}
+h3 {
+  color: var(--dark-blue);
+}
+.left-side {
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    justify-content: unset;
+  }
+}
+.btn.btn-dark-blue {
+  color: var(--light-blue);
+  background-color: var(--dark-blue);
+  transition: filter 0.3s ease;
+  font-size: 0.9rem;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+  &:hover,
+  &:focus {
+    filter: brightness(1.2);
+  }
+}
+.list {
+  list-style: none;
+  li {
+    color: #C4CCD0;
+  }
+  li.active {
+    color: #0561FC;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="charts-container bg-white rounded-5 shadow-sm p-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Visits</h3>
+    <ul class="list d-flex gap-2 gap-md-4 align-items-center p-0 p-md-2">
+      <li>D</li>
+        <li>W</li>
+        <li class="active">M</li>
+        <li>Y</li>
+        <!-- <li>
+          
+        </li> -->
+      </ul>
+  </div>
+  <div style="display: block;" class="chart ">
+    <canvas baseChart
+    
+    [datasets]="labelMFL"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    (chartHover)="chartHovered($event)"
+    (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
+

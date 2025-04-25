@@ -1,0 +1,48 @@
+<div class="orders mt-4">
+  <div class="orders-header d-flex justify-content-between">
+    <h3 class="fw-semibold">Recent Orders</h3>
+    <button style="color: #ACB7BD;" class="btn btn-link py-0 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover fs-4 d-flex align-items-center gap-3" >
+      <span>Go to Orders Page</span>
+      <i class="fas fa-arrow-right"></i>
+
+    </button>
+  </div>
+  <div class="orders-list bg-white px-2 py-3 p-md-5 shadow-sm rounded-5 mt-2 ">
+    <p-table [value]="ordersList()" class="p-datatable-sm" [tableStyle]="{ 'min-width': '100%' }">
+      <ng-template pTemplate="header">
+        <tr class="px-4">
+          <th>Item Name</th>
+          <th>Qty</th>
+          <th>Order Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </ng-template>
+    
+      <ng-template pTemplate="body" let-order>
+        <tr>
+          <td class="d-flex align-items-center gap-4">
+            <img [src]="order.image" alt="product" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
+            <span class="fw-bold">{{ order.itemName }}</span>
+          </td>
+          <td>{{ order.quantity }}</td>
+          <td class="text-muted">{{ order.orderDate }}</td>
+          <td class="fw-bold">{{ order.amount }}</td>
+          <td>
+            <span
+              class="badge px-3 py-2 rounded-pill"
+              [ngClass]="{
+                'pending': order.status === 'Pending',
+                'approved': order.status === 'Approved',
+                'in-progress': order.status === 'In Process'
+              }"
+            >
+              {{ order.status }}
+            </span>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    
+  </div>
+</div>

@@ -24,4 +24,5 @@ main{
   height: calc(100dvh - 7rem);
   border: 1px solid transparent;
   background-color: var(--bg-color);
+  overflow-y: auto;
 }

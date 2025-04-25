@@ -36,6 +36,33 @@
       "value": 11,
       "imagePath": "assets/dash-4.png"
     }
+  ],
+  "orders-list": [
+    {
+      "image": "assets/order-1.png",
+      "itemName": "Iphone 13",
+      "quantity": 1,
+      "orderDate": "January 20, 2022",
+      "amount": "$799.00",
+      "status": "Pending"
+    },
+    {
+      "image": "assets/order-2.png",
+      "itemName": "Xiaomi Redmi Note 10",
+      "quantity": 1,
+      "orderDate": "January 20, 2022",
+      "amount": "$799.00",
+      "status": "Approved"
+    },
+    {
+      "image": "assets/order-3.png",
+      "itemName": "Iphone 13",
+      "quantity": 1,
+      "orderDate": "January 20, 2022",
+      "amount": "$799.00",
+      "status": "In Process"
+    }
   ]
+  
  
 }
