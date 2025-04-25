@@ -39,6 +39,11 @@ h3 {
 }
 .list {
   list-style: none;
+  @media (max-width: 768px) {
+    flex-basis: 50%;
+    justify-content: space-between;
+    // padding-right: 1rem;
+  }
   li {
     color: #C4CCD0;
   }

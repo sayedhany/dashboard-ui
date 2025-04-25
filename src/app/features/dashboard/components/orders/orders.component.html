@@ -28,9 +28,9 @@
           <td>{{ order.quantity }}</td>
           <td class="text-muted">{{ order.orderDate }}</td>
           <td class="fw-bold">{{ order.amount }}</td>
-          <td>
+          <td >
             <span
-              class="badge px-3 py-2 rounded-pill"
+              class="badge px-3 py-2 rounded-pill w-50"
               [ngClass]="{
                 'pending': order.status === 'Pending',
                 'approved': order.status === 'Approved',
