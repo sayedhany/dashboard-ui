@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+.header{
+  // width: calc(100% - 28rem);
+  flex: 1;
+  border: 1px solid red;
+  height: 7rem;
+}
+.side-bar{
+  width: 28rem;
+  border: 1px solid red;
+  height: 100dvh;
+  @media (max-width: 991px) {
+    width: 12rem;
+    // display: none;
+  }
+  @media (max-width: 768px) {
+    // width: 0;
+    display: none;
+  }
+}
+main{
+  height: calc(100dvh - 7rem);
+  border: 1px solid red;
+  background-color: var(--bg-color);
+}
